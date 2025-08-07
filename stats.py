@@ -14,3 +14,18 @@ def get_num_char(books):
                 charcount[char] += 1
 
     return charcount
+
+
+def sort_on(items):
+    return items["num"]
+
+
+def dict_sort(dictionary):
+    lis = list()
+    for item in dictionary:
+        temp = dict()
+        temp["char"] = item
+        temp["num"] = dictionary[item]
+        lis.append(temp)
+    lis.sort(reverse=True, key=sort_on)
+    return lis
